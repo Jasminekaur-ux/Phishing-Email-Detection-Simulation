@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Email Detection System</title>
+    <!-- Link to our CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Phishing Email Detection System (Educational)</h1>
+            <p>Learn how to spot phishing emails by analyzing real-world examples. Can you identify the scams?</p>
+        </header>
+
+        <!-- Red Flags / Tips Section -->
+        <section class="red-flags-card">
+            <h2>Common Phishing Red Flags</h2>
+            <ul>
+                <li><strong>Urgency or Threats:</strong> "Act now or your account will be closed!"</li>
+                <li><strong>Suspicious Sender:</strong> Check the email address carefully (e.g., support@paypa1.com).</li>
+                <li><strong>Mismatched Links:</strong> Hover over links to see the real URL.</li>
+                <li><strong>Unexpected Attachments:</strong> Never open unknown files (zip, exe, etc.).</li>
+                <li><strong>Bad Grammar/Spelling:</strong> Professional companies rarely make obvious mistakes.</li>
+                <li><strong>Requests for Info:</strong> Legitimate companies won't ask for passwords via email.</li>
+            </ul>
+        </section>
+
+        <!-- Score / Progress Section -->
+        <div class="score-board">
+            <p>Score: <span id="score">0</span> / <span id="total">0</span></p>
+        </div>
+
+        <!-- Sample Email Viewer -->
+        <section class="email-viewer">
+            <div class="email-header">
+                <div class="email-row">
+                    <span class="label">From:</span>
+                    <span id="email-from" class="value">...</span>
+                </div>
+                <div class="email-row">
+                    <span class="label">Subject:</span>
+                    <span id="email-subject" class="value">...</span>
+                </div>
+            </div>
+            <div class="email-body">
+                <p id="email-body-text">Loading email...</p>
+            </div>
+        </section>
+
+        <!-- Action Buttons -->
+        <div class="controls">
+            <button id="btn-safe" class="btn safe">This looks SAFE</button>
+            <button id="btn-phishing" class="btn phishing">This looks PHISHING</button>
+        </div>
+
+        <!-- Feedback Area -->
+        <section id="feedback-area" class="feedback hidden">
+            <h3 id="feedback-title">Correct!</h3>
+            <p id="feedback-message">Here is why...</p>
+            <button id="btn-next" class="btn next">Next Email</button>
+        </section>
+
+        <!-- Disclaimer -->
+        <footer>
+            <p><strong>Disclaimer:</strong> This is an educational simulator. No real emails are sent or received. Do not enter personal information.</p>
+        </footer>
+    </div>
+
+    <!-- Link to our JavaScript file for logic -->
+    <script src="script.js"></script>
+</body>
+</html>

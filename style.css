@@ -1,0 +1,220 @@
+/* 
+   Style Sheet for Phishing Email Detection System 
+   Focus: Clean, readable, card-based layout helpful for beginners.
+*/
+
+/* Reset some default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Main Container to center content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #7f8c8d;
+}
+
+/* Red Flags Card */
+.red-flags-card {
+    background-color: #e8f6f3;
+    border-left: 5px solid #1abc9c;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.red-flags-card h2 {
+    margin-bottom: 15px;
+    color: #16a085;
+}
+
+.red-flags-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.red-flags-card li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.red-flags-card li::before {
+    content: "⚠️";
+    position: absolute;
+    left: 0;
+}
+
+/* Score Board */
+.score-board {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+/* Email Viewer Styling (Mimics an email client) */
+.email-viewer {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.email-header {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.email-row {
+    margin-bottom: 8px;
+}
+
+.email-row:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+    width: 60px;
+    display: inline-block;
+}
+
+.value {
+    color: #222;
+}
+
+.email-body {
+    padding: 20px;
+    background-color: #fff;
+    min-height: 150px;
+    white-space: pre-wrap; /* Preserves line breaks in email text */
+}
+
+/* Control Buttons */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s;
+    color: white;
+}
+
+.btn.safe {
+    background-color: #2ecc71;
+}
+
+.btn.safe:hover {
+    background-color: #27ae60;
+}
+
+.btn.phishing {
+    background-color: #e74c3c;
+}
+
+.btn.phishing:hover {
+    background-color: #c0392b;
+}
+
+/* Feedback Section */
+.feedback {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.feedback.correct {
+    background-color: #dbfadd;
+    border-color: #2ecc71;
+    color: #27ae60;
+}
+
+.feedback.incorrect {
+    background-color: #fadbd8;
+    border-color: #e74c3c;
+    color: #c0392b;
+}
+
+.feedback.hidden {
+    display: none;
+}
+
+.btn.next {
+    background-color: #3498db;
+    margin-top: 15px;
+}
+
+.btn.next:hover {
+    background-color: #2980b9;
+}
+
+/* Footer & Disclaimer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #95a5a6;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    .controls {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+}
